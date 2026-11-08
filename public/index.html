@@ -129,11 +129,18 @@ footer{background:#000;color:#fff;padding:60px 0 30px}
 @media(min-width:900px){.m-in{grid-template-columns:1fr 1fr}}
 .m-img{height:44vh;background:var(--soft);border-bottom:3px solid #000}
 @media(min-width:900px){.m-img{height:auto;aspect-ratio:4/5;border-bottom:0;border-right:3px solid #000}}
-.m-img{position:relative}.m-img img{width:100%;height:100%;object-fit:cover}
-.thumbs{position:absolute;left:10px;bottom:10px;display:flex;gap:6px}
-.thumbs button{width:46px;height:56px;border:2px solid #000;background:#fff;padding:0;opacity:.7}
-.thumbs button.on{opacity:1;box-shadow:3px 3px 0 #000}
-.thumbs img{width:100%;height:100%;object-fit:cover}
+.m-img{position:relative;overflow:hidden}
+.track{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center;user-select:none;-webkit-user-drag:none}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border:3px solid #000;background:#fff;box-shadow:3px 3px 0 #000;font-weight:900;font-size:20px;display:grid;place-items:center;z-index:2}
+.arr:active{transform:translate(3px,calc(-50% + 3px));box-shadow:0 0 0 #000}
+.arr.prev{left:10px}.arr.next{right:10px}
+.arr[hidden]{display:none}
+.dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:6px;z-index:2}
+.dots i{width:9px;height:9px;border:2px solid #000;background:#fff;transition:all .2s}
+.dots i.on{background:var(--red);width:22px}
+.count-tag{position:absolute;top:12px;left:12px;z-index:2;background:#000;color:#fff;font-weight:800;font-size:12px;padding:5px 9px}
 .m-body{padding:24px 20px 30px;display:flex;flex-direction:column;gap:18px}
 @media(min-width:900px){.m-body{padding:36px}}
 .m-body h3{font-size:clamp(36px,4vw,52px)}
@@ -250,7 +257,7 @@ footer{background:#000;color:#fff;padding:60px 0 30px}
 <div class="modal" id="modal" role="dialog" aria-modal="true">
   <button class="x" data-close aria-label="Close">✕</button>
   <div class="m-in">
-    <div class="m-img"><img id="mImg" alt=""><div class="thumbs" id="mThumbs"></div></div>
+    <div class="m-img"><div class="track" id="mTrack"></div><button class="arr prev" id="mPrev" aria-label="Previous photo">‹</button><button class="arr next" id="mNext" aria-label="Next photo">›</button><div class="dots" id="mDots"></div><span class="count-tag" id="mCount"></span></div>
     <div class="m-body">
       <div><div class="kind" id="mKind"></div><h3 class="A" id="mName" style="margin-top:6px"></h3></div>
       <div class="m-price" id="mPrice"></div>
@@ -320,15 +327,24 @@ $("#grid").onclick=e=>{const c=e.target.closest(".card");if(c)openM(+c.dataset.i
 
 let mp,ms;
 function openM(i){mp=P[i];ms=null;
-  $("#mImg").src=mp.imgs[0];$("#mKind").textContent=mp.label;$("#mName").textContent=mp.name;
-  $("#mThumbs").innerHTML=mp.imgs.length>1?mp.imgs.map((u,k)=>`<button class="${k?"":"on"}" data-u="${esc(u)}"><img src="${esc(u)}" alt=""></button>`).join(""):"";
+  $("#mKind").textContent=mp.label;$("#mName").textContent=mp.name;
+  $("#mTrack").innerHTML=mp.imgs.map((u,k)=>`<img src="${esc(u)}" alt="${esc(mp.name)} photo ${k+1}" draggable="false" ${k?'loading="lazy"':''}>`).join("");
+  $("#mTrack").scrollLeft=0;const many=mp.imgs.length>1;
+  $("#mDots").innerHTML=many?mp.imgs.map((_,k)=>`<i class="${k?"":"on"}"></i>`).join(""):"";
+  $("#mPrev").hidden=$("#mNext").hidden=$("#mCount").hidden=!many;gi=0;galleryUI();
   $("#mPrice").innerHTML=ksh(mp.price)+(mp.was?`<s>${ksh(mp.was)}</s>`:"");
   $("#mSizes").innerHTML=mp.sizes.map(s=>`<button class="size">${esc(s)}</button>`).join("");
   $("#mNeed").style.display="none";$("#mAdd").disabled=!!mp.out;
   $("#mWa").textContent=mp.out?"Ask about restock":"Order on WhatsApp";
   $("#mNote").textContent=mp.out?"Sold out right now. Message us and we'll tell you when it's back.":"Official licensed. We confirm stock & delivery on WhatsApp before you pay.";
   show("#modal")}
-$("#mThumbs").onclick=e=>{const b=e.target.closest("[data-u]");if(!b)return;$("#mImg").src=b.dataset.u;document.querySelectorAll("#mThumbs button").forEach(x=>x.classList.toggle("on",x===b))};
+let gi=0;const tr=$("#mTrack");
+function galleryUI(){const n=mp?mp.imgs.length:0;document.querySelectorAll("#mDots i").forEach((d,k)=>d.classList.toggle("on",k===gi));$("#mCount").textContent=`${gi+1} / ${n}`;$("#mPrev").style.opacity=gi?1:.35;$("#mNext").style.opacity=gi<n-1?1:.35}
+function go(k){const n=mp.imgs.length;gi=Math.max(0,Math.min(n-1,k));tr.scrollTo({left:gi*tr.clientWidth,behavior:"smooth"});galleryUI()}
+$("#mPrev").onclick=()=>go(gi-1);$("#mNext").onclick=()=>go(gi+1);
+tr.addEventListener("scroll",()=>{const k=Math.round(tr.scrollLeft/tr.clientWidth);if(k!==gi){gi=k;galleryUI()}},{passive:true});
+document.addEventListener("keydown",e=>{if(!$("#modal").classList.contains("on"))return;if(e.key==="ArrowRight")go(gi+1);if(e.key==="ArrowLeft")go(gi-1)});
+let dx=null;tr.addEventListener("mousedown",e=>{dx=e.clientX});addEventListener("mouseup",e=>{if(dx===null)return;const d=e.clientX-dx;dx=null;if(Math.abs(d)>40)go(gi+(d<0?1:-1))});
 $("#mSizes").onclick=e=>{const b=e.target.closest(".size");if(!b)return;ms=b.textContent;document.querySelectorAll(".size").forEach(s=>s.classList.toggle("on",s===b));$("#mNeed").style.display="none"};
 const need=()=>ms?false:($("#mNeed").style.display="block",true);
 $("#mAdd").onclick=()=>{if(need())return;const key=mp.id+"|"+ms,ex=bag.find(b=>b.key===key);ex?ex.q++:bag.push({key,n:mp.name,k:mp.label,s:ms,p:mp.price,img:mp.imgs[0],q:1});save();hide();toast(`Added: ${mp.name} (${ms})`)};
