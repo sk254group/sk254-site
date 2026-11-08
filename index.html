@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SK254 — Street</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e10600;--green:#00843d;--ink:#0a0a0a;--paper:#fff;--soft:#f3f1ec;--mute:#666;--sh:6px 6px 0 #000;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+a{color:inherit;text-decoration:none}
+.A{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.9;font-weight:400}
+.wrap{max-width:1320px;margin:0 auto;padding:0 18px}
+@media(min-width:900px){.wrap{padding:0 40px}}
+
+nav{position:sticky;top:0;z-index:40;background:#fff;border-bottom:3px solid #000}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Anton;font-size:28px;letter-spacing:.02em}
+.logo img{width:34px;height:34px;border-radius:50%;border:2px solid #000}
+.links{display:none;gap:22px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.links a:hover{color:var(--red)}
+@media(min-width:900px){.links{display:flex}}
+.bagbtn{position:relative;height:42px;padding:0 14px;border:3px solid #000;background:var(--green);color:#fff;font-weight:800;font-size:13px;text-transform:uppercase;box-shadow:3px 3px 0 #000;display:flex;align-items:center;gap:8px;transition:transform .15s,box-shadow .15s}
+.bagbtn:active{transform:translate(3px,3px);box-shadow:0 0 0 #000}
+.count{background:#fff;color:#000;min-width:20px;height:20px;border-radius:10px;font-size:11px;display:grid;place-items:center;padding:0 5px}
+.flag{height:14px;background:linear-gradient(#000 0 28%,#fff 28% 36%,var(--red) 36% 64%,#fff 64% 72%,var(--green) 72%)}
+
+.hero{background:var(--red);color:#fff;overflow:hidden;position:relative;border-bottom:3px solid #000}
+.hero-in{display:grid;gap:34px;padding-top:44px;padding-bottom:60px;align-items:center}
+@media(min-width:900px){.hero-in{grid-template-columns:1.2fr .8fr;padding-top:70px;padding-bottom:90px}}
+.hero h1{font-size:clamp(84px,19vw,230px);text-shadow:6px 6px 0 #000}
+.hero h1 span{display:block}
+.hero h1 .g{color:#000;text-shadow:6px 6px 0 #fff}
+.hero p{font-weight:600;font-size:17px;line-height:1.5;max-width:420px;margin:24px 0 28px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:54px;padding:0 26px;border:3px solid #000;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.03em;box-shadow:var(--sh);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 #000}
+.btn:active{transform:translate(6px,6px);box-shadow:0 0 0 #000}
+.b-white{background:#fff;color:#000}.b-black{background:#000;color:#fff;box-shadow:6px 6px 0 #fff;border-color:#fff}
+.b-green{background:var(--green);color:#fff}.b-ink{background:#000;color:#fff}
+.btn[disabled]{opacity:.35;pointer-events:none}
+
+.shot{position:relative;justify-self:center;width:min(420px,86%)}
+.shot .frame{border:4px solid #000;box-shadow:12px 12px 0 #000;background:#fff;aspect-ratio:4/5;overflow:hidden;transform:rotate(2deg)}
+.shot .frame img{width:100%;height:100%;object-fit:cover;transition:opacity .5s}
+.sticker{position:absolute;z-index:2;font-family:Anton;text-transform:uppercase;padding:10px 14px;border:3px solid #000;box-shadow:4px 4px 0 #000;font-size:18px;line-height:1;animation:wob 2.6s ease-in-out infinite}
+.s1{top:-14px;left:-14px;background:var(--green);color:#fff;--r:-10deg}
+.s2{bottom:26px;right:-16px;background:#fff;color:#000;--r:8deg;animation-delay:-1.3s}
+.s3{top:44%;left:-22px;background:#000;color:#fff;--r:-4deg;font-size:15px;animation-delay:-.6s}
+@keyframes wob{0%,100%{transform:rotate(var(--r)) scale(1)}50%{transform:rotate(calc(var(--r) * -1)) scale(1.06)}}
+
+.mqs{overflow:hidden;padding:34px 0;background:var(--soft);border-bottom:3px solid #000}
+.mq{white-space:nowrap;border-block:3px solid #000;padding:12px 0;width:110%;margin-left:-5%}
+.mq.k{background:#000;color:#fff;transform:rotate(-2deg)}
+.mq.gr{background:var(--green);color:#fff;transform:rotate(1.6deg);margin-top:-6px}
+.mq div{display:inline-flex;gap:34px;font-family:Anton;text-transform:uppercase;font-size:clamp(24px,4vw,40px);animation:mq 30s linear infinite}
+.mq.gr div{animation-direction:reverse}
+.mq span::after{content:"★";margin-left:34px;color:var(--red)}
+.mq.gr span::after{color:#000}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:70px 0}
+@media(min-width:900px){section{padding:100px 0}}
+.head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.head h2{font-size:clamp(52px,9vw,110px)}
+.head h2 em{font-style:normal;color:var(--red)}
+.head p{font-weight:600;max-width:340px;line-height:1.5;color:#333}
+
+.chips{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:4px 6px 12px 2px;margin-bottom:22px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;height:42px;padding:0 16px;border:3px solid #000;background:#fff;font-weight:800;font-size:13px;text-transform:uppercase;box-shadow:3px 3px 0 #000;transition:transform .15s,box-shadow .15s,background .15s}
+.chip:hover{background:var(--soft)}
+.chip.on{background:var(--red);color:#fff}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 14px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,1fr);gap:34px 24px}}
+.card{text-align:left;border:3px solid #000;background:#fff;box-shadow:var(--sh);transition:transform .2s var(--ease),box-shadow .2s var(--ease);display:block;width:100%;animation:pop .45s var(--ease) both}
+.card:hover{transform:translate(-4px,-4px);box-shadow:10px 10px 0 #000}
+.card:active{transform:translate(4px,4px);box-shadow:2px 2px 0 #000}
+@keyframes pop{from{opacity:0;transform:translateY(16px) rotate(-1deg)}}
+.ph{position:relative;aspect-ratio:4/5;overflow:hidden;border-bottom:3px solid #000;background:var(--soft)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.card.sold .ph img{filter:grayscale(1);opacity:.5}
+.tag{position:absolute;top:8px;left:8px;font-family:Anton;text-transform:uppercase;font-size:14px;padding:5px 9px;border:2px solid #000;background:#fff;transform:rotate(-4deg)}
+.tag.sale{background:var(--red);color:#fff}.tag.out{background:#000;color:#fff}.tag.new{background:var(--green);color:#fff}
+.meta{padding:12px 12px 14px}
+.kind{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--green)}
+.name{font-weight:800;font-size:15px;line-height:1.25;margin-top:4px}
+.price{margin-top:8px;font-family:Anton;font-size:22px}
+.price s{font-family:Inter;font-size:13px;color:var(--mute);margin-left:6px;font-weight:600}
+
+.vs{display:grid;gap:22px}
+@media(min-width:900px){.vs{grid-template-columns:1fr 1fr}}
+.vbox{border:3px solid #000;box-shadow:var(--sh);padding:28px;background:#fff}
+.vbox.k{background:#000;color:#fff;box-shadow:6px 6px 0 var(--red)}
+.vbox h3{font-size:clamp(40px,5vw,64px)}
+.vbox .pp{font-family:Anton;font-size:24px;color:var(--red);margin:10px 0 14px}
+.vbox li{list-style:none;font-weight:600;line-height:1.5;padding:6px 0;border-top:2px dashed currentColor}
+
+.custom{background:var(--green);color:#fff;border-block:3px solid #000}
+.cust{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.cust{grid-template-columns:1fr 1fr}}
+.cust h2{font-size:clamp(60px,11vw,140px);text-shadow:5px 5px 0 #000}
+.cust p{font-weight:600;line-height:1.5;margin:18px 0 26px;max-width:420px}
+.cust .frame{border:4px solid #000;box-shadow:10px 10px 0 #000;transform:rotate(-2deg);overflow:hidden}
+.cust .frame img{width:100%;aspect-ratio:1;object-fit:cover}
+
+footer{background:#000;color:#fff;padding:60px 0 30px}
+.fbig{font-size:clamp(90px,26vw,340px);color:var(--red);line-height:.8;margin-top:34px}
+.fcols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(min-width:900px){.fcols{grid-template-columns:2fr 1fr 1fr}}
+.fcols h4{font-family:Anton;text-transform:uppercase;font-size:20px;margin-bottom:10px;color:var(--green)}
+.fcols a{display:block;padding:4px 0;font-weight:600}
+.fcols a:hover{color:var(--red)}
+
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60;opacity:0;pointer-events:none;transition:opacity .3s}
+.scrim.on{opacity:1;pointer-events:auto}
+.modal{position:fixed;z-index:70;left:0;right:0;bottom:0;max-height:92vh;overflow:auto;background:#fff;border-top:4px solid #000;transform:translateY(102%);transition:transform .4s var(--ease)}
+.modal.on{transform:none}
+@media(min-width:900px){.modal{left:50%;top:50%;bottom:auto;right:auto;width:min(980px,92vw);border:4px solid #000;box-shadow:12px 12px 0 var(--red);transform:translate(-50%,-45%);opacity:0;pointer-events:none;transition:all .35s var(--ease)}.modal.on{transform:translate(-50%,-50%);opacity:1;pointer-events:auto}}
+.m-in{display:grid}
+@media(min-width:900px){.m-in{grid-template-columns:1fr 1fr}}
+.m-img{height:44vh;background:var(--soft);border-bottom:3px solid #000}
+@media(min-width:900px){.m-img{height:auto;aspect-ratio:4/5;border-bottom:0;border-right:3px solid #000}}
+.m-img img{width:100%;height:100%;object-fit:cover}
+.m-body{padding:24px 20px 30px;display:flex;flex-direction:column;gap:18px}
+@media(min-width:900px){.m-body{padding:36px}}
+.m-body h3{font-size:clamp(36px,4vw,52px)}
+.m-price{font-family:Anton;font-size:30px;color:var(--red)}
+.m-price s{font-family:Inter;font-size:15px;color:var(--mute);margin-left:8px}
+.lbl{font-weight:800;text-transform:uppercase;font-size:13px;margin-bottom:10px}
+.sizes{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.size{height:48px;border:3px solid #000;font-weight:800;background:#fff;transition:background .15s}
+.size:hover{background:var(--soft)}
+.size.on{background:#000;color:#fff}
+.need{color:var(--red);font-weight:700;font-size:13px;margin-top:8px;display:none}
+.m-act{display:grid;gap:14px}
+.note{font-size:13px;color:var(--mute);line-height:1.5;font-weight:500}
+.x{position:absolute;top:12px;right:12px;width:42px;height:42px;border:3px solid #000;background:#fff;font-weight:800;font-size:18px;z-index:2;box-shadow:3px 3px 0 #000}
+
+.drawer{position:fixed;z-index:70;top:0;right:0;bottom:0;width:min(440px,100vw);background:#fff;border-left:4px solid #000;transform:translateX(102%);transition:transform .4s var(--ease);display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.d-head{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:var(--red);color:#fff;border-bottom:3px solid #000}
+.d-head h3{font-size:34px}
+.d-head .x{position:static}
+.d-list{flex:1;overflow:auto;padding:6px 20px}
+.d-item{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:14px 0;border-bottom:2px dashed #000;align-items:center}
+.d-item img{width:72px;height:90px;object-fit:cover;border:2px solid #000}
+.d-item b{font-weight:800;font-size:14px;display:block}
+.d-item small{color:var(--mute);font-size:12px;font-weight:600}
+.qty{display:flex;align-items:center;gap:6px;margin-top:8px}
+.qty button{width:28px;height:28px;border:2px solid #000;font-weight:800}
+.empty{text-align:center;padding:70px 10px;font-weight:700}
+.d-foot{padding:18px 20px 24px;border-top:3px solid #000;display:grid;gap:12px}
+.d-total{display:flex;justify-content:space-between;font-family:Anton;font-size:26px;text-transform:uppercase}
+
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,calc(100% + 40px));background:var(--green);color:#fff;border:3px solid #000;box-shadow:4px 4px 0 #000;padding:12px 18px;font-weight:800;font-size:14px;z-index:90;transition:transform .35s var(--ease);white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.toast.on{transform:translate(-50%,0)}
+.opts{position:fixed;left:14px;bottom:14px;z-index:50;background:#000;color:#fff;border:3px solid #fff;outline:2px solid #000;padding:8px 12px;font-weight:800;font-size:12px;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#" class="logo"><img src="" id="logo1" alt="">SK254</a>
+    <div class="links">
+      <a href="#shop" data-jump="all">New Season</a>
+      <a href="#shop" data-jump="player">Player Version</a>
+      <a href="#shop" data-jump="kids">Kids</a>
+      <a href="#shop" data-jump="f1">F1</a>
+      <a href="#custom">Custom</a>
+    </div>
+    <button class="bagbtn" id="bagBtn">Bag <span class="count" id="count">0</span></button>
+  </div>
+  <div class="flag"></div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1 class="A"><span>Jerseys</span><span class="g">On</span><span>Jerseys</span></h1>
+      <p>Official licensed kits from the clubs you live for. Fan & Player Versions. Delivered across Kenya.</p>
+      <div class="btns">
+        <a href="#shop" class="btn b-white">Shop now →</a>
+        <a href="#" class="btn b-black" id="waHero">WhatsApp us</a>
+      </div>
+    </div>
+    <div class="shot">
+      <span class="sticker s1">100% Official</span>
+      <span class="sticker s3">26/27 Season</span>
+      <div class="frame"><img id="heroImg" alt=""></div>
+      <span class="sticker s2">From Ksh 1,499</span>
+    </div>
+  </div>
+</header>
+
+<div class="mqs">
+  <div class="mq k"><div id="mq1"></div></div>
+  <div class="mq gr"><div id="mq2"></div></div>
+</div>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="head"><h2 class="A">New <em>Drops</em></h2><p>Tap a kit, pick your size, order straight to WhatsApp. Easy.</p></div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section style="background:var(--soft);border-block:3px solid #000">
+  <div class="wrap">
+    <div class="head"><h2 class="A">Fan <em>vs</em> Player</h2><p>Same badge. Different fit.</p></div>
+    <div class="vs">
+      <div class="vbox"><h3 class="A">Fan Version</h3><div class="pp">From Ksh 1,499</div><ul><li>Regular, relaxed fit</li><li>Embroidered badge</li><li>Order your usual size</li></ul></div>
+      <div class="vbox k"><h3 class="A">Player Version</h3><div class="pp">From Ksh 1,599</div><ul><li>Slim, athletic fit</li><li>Light match fabric</li><li>Size up for a loose fit</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="custom" id="custom">
+  <div class="wrap cust">
+    <div>
+      <h2 class="A">Your name.<br>Your number.</h2>
+      <p>Team kits, cricket whites and dry-fit tees, custom printed by SK254.</p>
+      <a href="#" class="btn b-white" id="waCustom">Get a quote →</a>
+    </div>
+    <div class="frame"><img id="custImg" alt=""></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="logo" style="margin-bottom:10px"><img src="" id="logo2" alt="">SK254</div><p style="color:#aaa;font-weight:500;line-height:1.6;max-width:300px">Soccer Kits 254. Official licensed merchandise. Exclusively authentic.</p></div>
+      <div><h4>Shop</h4><a href="#shop" data-jump="all">Football</a><a href="#shop" data-jump="f1">Formula 1</a><a href="#shop" data-jump="rugby">Rugby</a><a href="#shop" data-jump="kids">Kids</a></div>
+      <div><h4>Follow</h4><a href="https://instagram.com/soccerkits254" target="_blank">Instagram</a><a href="https://whatsapp.com/channel/0029Vb6JQKz2ER6jKnTS8H2e" target="_blank">WhatsApp channel</a></div>
+    </div>
+    <div class="fbig A">SK254</div>
+  </div>
+</footer>
+
+
+<div class="scrim" id="scrim"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <button class="x" data-close aria-label="Close">✕</button>
+  <div class="m-in">
+    <div class="m-img"><img id="mImg" alt=""></div>
+    <div class="m-body">
+      <div><div class="kind" id="mKind"></div><h3 class="A" id="mName" style="margin-top:6px"></h3></div>
+      <div class="m-price" id="mPrice"></div>
+      <div><div class="lbl">Pick your size</div><div class="sizes" id="mSizes"></div><div class="need" id="mNeed">Pick a size first!</div></div>
+      <div class="m-act"><button class="btn b-ink" id="mAdd">Add to bag</button><button class="btn b-green" id="mWa">Order on WhatsApp</button></div>
+      <p class="note" id="mNote"></p>
+    </div>
+  </div>
+</div>
+<aside class="drawer" id="drawer">
+  <div class="d-head"><h3 class="A">Your bag</h3><button class="x" data-close aria-label="Close">✕</button></div>
+  <div class="d-list" id="dList"></div>
+  <div class="d-foot" id="dFoot"><div class="d-total"><span>Total</span><span id="dTotal"></span></div><button class="btn b-green" id="dWa">Checkout on WhatsApp</button></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script>
+const P=SK_PRODUCTS,$=s=>document.querySelector(s),ksh=n=>"Ksh "+n.toLocaleString("en-KE");
+const ADULT=["S","M","L","XL","XXL"],KIDS=["4–5y","6–7y","8–9y","10–11y","12–13y"];
+const wa=t=>window.open(`https://wa.me/${SK_WA}?text=${encodeURIComponent(t)}`,"_blank");
+let bag=[];try{bag=JSON.parse(localStorage.getItem("sk254bag")||"[]")}catch(e){}
+$("#logo1").src=$("#logo2").src=SK_LOGO;
+$("#custImg").src="https://cdn3.take.app/media/cmh5x11oj000004l5e8budw4b.png?width=1000";
+$("#waHero").onclick=e=>{e.preventDefault();wa("Hi SK254!")};
+$("#waCustom").onclick=e=>{e.preventDefault();wa("Hi SK254, I'd like a custom print quote.")};
+
+const heroes=P.filter(p=>p.hero);let hi=0;const hImg=$("#heroImg");hImg.src=SK_IMG(heroes[0].img);
+setInterval(()=>{hi=(hi+1)%heroes.length;hImg.style.opacity=0;setTimeout(()=>{hImg.src=SK_IMG(heroes[hi].img);hImg.style.opacity=1},400)},3500);
+
+const clubs=["Arsenal","Chelsea","Barça","Bayern","Real Madrid","PSG","Man United","Man City","Spurs","Harambee Stars","F1"];
+const mqHtml=[...clubs,...clubs].map(c=>`<span>${c}</span>`).join("");$("#mq1").innerHTML=mqHtml;$("#mq2").innerHTML=mqHtml;
+
+let cur="all";
+$("#chips").innerHTML=SK_FILTERS.map(([k,l])=>`<button class="chip${k==="all"?" on":""}" data-f="${k}">${l}</button>`).join("");
+$("#chips").onclick=e=>{const b=e.target.closest(".chip");if(b)setF(b.dataset.f)};
+function setF(f){cur=f;document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c.dataset.f===f));render()}
+function render(){
+  $("#grid").innerHTML=P.map((p,i)=>({...p,i})).filter(p=>cur==="all"||p.c.includes(cur)).map((p,j)=>`
+  <button class="card${p.out?" sold":""}" data-i="${p.i}" style="animation-delay:${Math.min(j,8)*40}ms">
+    <div class="ph"><img loading="lazy" src="${SK_IMG(p.img)}" alt="${p.n}">${p.out?'<span class="tag out">Sold out</span>':p.was?'<span class="tag sale">Sale</span>':p.hero?'<span class="tag new">New</span>':""}</div>
+    <div class="meta"><div class="kind">${p.k}</div><div class="name">${p.n}</div><div class="price">${ksh(p.p)}${p.was?`<s>${ksh(p.was)}</s>`:""}</div></div>
+  </button>`).join("");
+}
+render();
+$("#grid").onclick=e=>{const c=e.target.closest(".card");if(c)openM(+c.dataset.i)};
+document.querySelectorAll("[data-jump]").forEach(a=>a.addEventListener("click",()=>setF(a.dataset.jump)));
+
+let mp,ms;
+function openM(i){mp=P[i];ms=null;
+  $("#mImg").src=SK_IMG(mp.img);$("#mKind").textContent=mp.k;$("#mName").textContent=mp.n;
+  $("#mPrice").innerHTML=ksh(mp.p)+(mp.was?`<s>${ksh(mp.was)}</s>`:"");
+  $("#mSizes").innerHTML=(mp.kids?KIDS:ADULT).map(s=>`<button class="size">${s}</button>`).join("");
+  $("#mNeed").style.display="none";$("#mAdd").disabled=!!mp.out;
+  $("#mWa").textContent=mp.out?"Ask about restock":"Order on WhatsApp";
+  $("#mNote").textContent=mp.out?"Sold out right now. Message us and we'll tell you when it's back.":"Official licensed. We confirm stock & delivery on WhatsApp before you pay.";
+  show("#modal")}
+$("#mSizes").onclick=e=>{const b=e.target.closest(".size");if(!b)return;ms=b.textContent;document.querySelectorAll(".size").forEach(s=>s.classList.toggle("on",s===b));$("#mNeed").style.display="none"};
+const need=()=>ms?false:($("#mNeed").style.display="block",true);
+$("#mAdd").onclick=()=>{if(need())return;const key=mp.n+"|"+mp.k+"|"+ms,ex=bag.find(b=>b.key===key);ex?ex.q++:bag.push({key,n:mp.n,k:mp.k,s:ms,p:mp.p,img:mp.img,q:1});save();hide();toast(`Added: ${mp.n} (${ms})`)};
+$("#mWa").onclick=()=>{if(mp.out)return wa(`Hi SK254, is the ${mp.n} (${mp.k}) coming back in stock?`);if(need())return;wa(`Hi SK254, I'd like to order:\n\n• ${mp.n} (${mp.k}) · Size ${ms} · ${ksh(mp.p)}\n\nDelivery to: `)};
+
+function save(){try{localStorage.setItem("sk254bag",JSON.stringify(bag))}catch(e){}draw()}
+function draw(){const n=bag.reduce((a,b)=>a+b.q,0);$("#count").textContent=n;$("#dFoot").style.display=n?"grid":"none";
+  $("#dList").innerHTML=n?bag.map((b,i)=>`<div class="d-item"><img src="${SK_IMG(b.img,300)}" alt=""><div><b>${b.n}</b><small>${b.k} · Size ${b.s}</small><div class="qty"><button data-q="${i}" data-d="-1">−</button><span>${b.q}</span><button data-q="${i}" data-d="1">+</button></div></div><div style="font-family:Anton;font-size:18px">${ksh(b.p*b.q)}</div></div>`).join(""):`<div class="empty">Your bag is empty.<br><br><button class="btn b-ink" data-close>Start shopping</button></div>`;
+  $("#dTotal").textContent=ksh(bag.reduce((a,b)=>a+b.p*b.q,0))}
+$("#dList").onclick=e=>{const b=e.target.closest("[data-q]");if(!b)return;const it=bag[+b.dataset.q];it.q+=+b.dataset.d;if(it.q<1)bag.splice(+b.dataset.q,1);save()};
+$("#dWa").onclick=()=>wa(`Hi SK254, I'd like to order:\n\n${bag.map(b=>`• ${b.q}× ${b.n} (${b.k}) · Size ${b.s} · ${ksh(b.p*b.q)}`).join("\n")}\n\nTotal: ${$("#dTotal").textContent}\nDelivery to: `);
+$("#bagBtn").onclick=()=>{draw();show("#drawer")};draw();
+
+function show(s){$("#scrim").classList.add("on");$(s).classList.add("on");document.body.style.overflow="hidden"}
+function hide(){["#scrim","#modal","#drawer"].forEach(s=>$(s).classList.remove("on"));document.body.style.overflow=""}
+document.addEventListener("click",e=>{if(e.target.closest("[data-close]")||e.target.id==="scrim")hide()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")hide()});
+let tt;function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),2200)}
+</script>
+</body>
+</html>
