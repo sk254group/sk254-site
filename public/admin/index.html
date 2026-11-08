@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a0a0a">
+<title>SK254 Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f4f2;--card:#fff;--ink:#0a0a0a;--mute:#6b6b6b;--line:#e6e6e3;--green:#00843d;--red:#e10600;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;font-size:15px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,textarea,select{font:inherit;color:inherit}
+img{display:block;max-width:100%}
+.hide{display:none!important}
+
+/* login */
+#login{min-height:100vh;display:grid;place-items:center;padding:24px}
+.lbox{width:100%;max-width:360px;text-align:center}
+.lbox img{width:72px;height:72px;border-radius:50%;margin:0 auto 18px}
+.lbox h1{font-size:24px;font-weight:800;letter-spacing:-.02em}
+.lbox p{color:var(--mute);margin:6px 0 24px}
+.err{color:var(--red);font-weight:600;font-size:14px;margin-top:12px;min-height:20px}
+
+/* app shell */
+header.top{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top))}
+header.top h1{font-size:18px;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+header.top h1 img{width:28px;height:28px;border-radius:50%}
+.view-store{font-size:13px;font-weight:600;background:#ffffff1f;padding:8px 12px;border-radius:999px;color:#fff;text-decoration:none}
+main{padding:16px 16px 120px;max-width:720px;margin:0 auto}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);padding-bottom:env(safe-area-inset-bottom)}
+nav.tabs button{padding:10px 0 12px;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--mute)}
+nav.tabs button.on{color:var(--ink)}
+nav.tabs svg{width:22px;height:22px}
+
+/* inputs */
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.field small{display:block;color:var(--mute);font-size:12px;margin-top:5px}
+.in{width:100%;height:48px;border:1.5px solid var(--line);border-radius:12px;padding:0 14px;background:#fff;outline:none;transition:border-color .2s}
+textarea.in{height:auto;min-height:84px;padding:12px 14px;resize:vertical;line-height:1.45}
+.in:focus{border-color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{height:50px;border-radius:12px;padding:0 20px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .1s,opacity .2s}
+.btn:active{transform:scale(.97)}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.b-ink{background:var(--ink);color:#fff}
+.b-green{background:var(--green);color:#fff}
+.b-line{border:1.5px solid var(--line);background:#fff}
+.b-red{color:var(--red);border:1.5px solid #f3c7c5;background:#fff}
+.full{width:100%}
+
+/* cards / lists */
+.card{background:var(--card);border-radius:var(--r);border:1px solid var(--line)}
+.sec-title{font-size:13px;font-weight:700;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:22px 4px 10px}
+.toolbar{display:flex;gap:8px;margin-bottom:12px}
+.toolbar .in{height:44px}
+.fchips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:12px}
+.fchips::-webkit-scrollbar{display:none}
+.fchip{flex:none;height:34px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-size:13px;font-weight:600}
+.fchip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plist{overflow:hidden}
+.prow{display:flex;align-items:center;gap:12px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:0}
+.prow .th{width:54px;height:66px;border-radius:9px;object-fit:cover;background:var(--bg);flex:none}
+.prow .info{flex:1;min-width:0;text-align:left}
+.prow .nm{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prow .sub{color:var(--mute);font-size:13px;margin-top:2px}
+.pills{display:flex;gap:5px;margin-top:5px;flex-wrap:wrap}
+.pill{font-size:11px;font-weight:700;padding:3px 7px;border-radius:6px;background:var(--bg)}
+.pill.out{background:#111;color:#fff}.pill.hid{background:#fde8e7;color:var(--red)}.pill.feat{background:#e3f4ea;color:var(--green)}.pill.sale{background:var(--red);color:#fff}
+.mv{display:flex;flex-direction:column;gap:4px}
+.mv button{width:34px;height:30px;border-radius:8px;border:1.5px solid var(--line);font-weight:800}
+.empty{padding:40px 16px;text-align:center;color:var(--mute)}
+
+/* switch */
+.sw{position:relative;width:48px;height:28px;flex:none}
+.sw input{opacity:0;width:0;height:0;position:absolute}
+.sw span{position:absolute;inset:0;border-radius:999px;background:#d6d6d2;transition:background .2s}
+.sw span::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.sw input:checked+span{background:var(--green)}
+.sw input:checked+span::after{transform:translateX(20px)}
+.swrow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 14px;border-bottom:1px solid var(--line)}
+.swrow:last-child{border-bottom:0}
+.swrow b{display:block;font-weight:700}
+.swrow small{color:var(--mute);font-size:12.5px}
+.instock{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:700;color:var(--mute)}
+
+/* fab */
+.fab{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:15;height:56px;padding:0 22px;border-radius:999px;background:var(--green);color:#fff;font-weight:800;box-shadow:0 8px 24px rgba(0,132,61,.35);display:flex;align-items:center;gap:8px}
+
+/* editor sheet */
+.sheet{position:fixed;inset:0;z-index:40;background:var(--bg);overflow:auto;transform:translateY(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.sheet.on{transform:none}
+.sheet header{position:sticky;top:0;z-index:2;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px 12px;padding-top:calc(12px + env(safe-area-inset-top))}
+.sheet header b{font-size:16px}
+.sheet header .btn{height:40px;padding:0 16px}
+.sheet .body{padding:16px;max-width:720px;margin:0 auto 60px}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ph{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#e9e9e6}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph .rm{position:absolute;top:6px;right:6px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:14px;font-weight:700}
+.ph .cov{position:absolute;left:6px;bottom:6px;font-size:11px;font-weight:700;padding:4px 8px;border-radius:6px;background:rgba(0,0,0,.65);color:#fff}
+.ph .cov.is{background:var(--green)}
+.ph.add{border:2px dashed #c9c9c4;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:700;font-size:13px;color:var(--mute)}
+.ph.add svg{width:28px;height:28px}
+.ph .spin{position:absolute;inset:0;display:grid;place-items:center;background:rgba(255,255,255,.7);font-weight:700;font-size:13px}
+.cchips{display:flex;flex-wrap:wrap;gap:8px}
+.cchip{height:38px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:14px}
+.cchip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.presets button{height:32px;padding:0 12px;border-radius:8px;border:1.5px solid var(--line);background:#fff;font-size:13px;font-weight:600}
+
+/* categories */
+.crow{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.crow:last-child{border-bottom:0}
+.crow .in{height:44px}
+.crow .cnt{font-size:12px;color:var(--mute);width:56px;text-align:right;flex:none}
+.icon-btn{width:40px;height:40px;border-radius:10px;border:1.5px solid var(--line);background:#fff;display:grid;place-items:center;flex:none;font-weight:800}
+.icon-btn.del{color:var(--red)}
+
+/* toast */
+.toast{position:fixed;left:50%;top:calc(16px + env(safe-area-inset-top));transform:translate(-50%,-160%);z-index:99;background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .3s;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.toast.on{transform:translate(-50%,0)}
+.toast.bad{background:var(--red)}
+.savebar{position:sticky;bottom:calc(70px + env(safe-area-inset-bottom));margin-top:18px}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="login" class="hide">
+  <form class="lbox" id="loginForm">
+    <img id="lLogo" alt="">
+    <h1>SK254 Admin</h1>
+    <p>Log in to manage your store</p>
+    <div class="field" style="text-align:left"><input class="in" type="password" id="pw" placeholder="Password" autocomplete="current-password" required></div>
+    <button class="btn b-ink full" id="loginBtn">Log in</button>
+    <div class="err" id="loginErr"></div>
+  </form>
+</section>
+
+<!-- APP -->
+<section id="app" class="hide">
+  <header class="top">
+    <h1><img id="hLogo" alt=""><span id="hTitle">Products</span></h1>
+    <a class="view-store" href="/" target="_blank">View store ↗</a>
+  </header>
+
+  <main>
+    <!-- PRODUCTS -->
+    <div id="v-products">
+      <div class="toolbar">
+        <input class="in" id="search" placeholder="Search products…" type="search">
+        <button class="btn b-line" id="reorderBtn" style="height:44px;padding:0 14px">Reorder</button>
+      </div>
+      <div class="fchips" id="pfilters"></div>
+      <div class="card plist" id="plist"></div>
+      <button class="fab" id="addBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add product</button>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div id="v-categories" class="hide">
+      <p style="color:var(--mute);margin:4px 4px 14px;line-height:1.5">These are the filter buttons on your store. Empty categories are hidden automatically.</p>
+      <div class="card" id="clist"></div>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <input class="in" id="newCat" placeholder="New category name, e.g. NBA">
+        <button class="btn b-ink" id="addCat" style="flex:none">Add</button>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="v-settings" class="hide">
+      <div class="sec-title">Store</div>
+      <div class="card" style="padding:16px">
+        <div class="field"><label>Logo</label>
+          <div style="display:flex;align-items:center;gap:12px"><img id="sLogo" style="width:60px;height:60px;border-radius:50%;object-fit:cover;background:var(--bg)"><label class="btn b-line" style="height:42px">Change logo<input type="file" accept="image/*" id="logoFile" hidden></label></div>
+        </div>
+        <div class="field"><label>WhatsApp number for orders</label><input class="in" data-s="whatsapp" inputmode="tel"><small>Country code + number, no spaces. Example: 254737170911</small></div>
+        <div class="field"><label>Instagram username</label><input class="in" data-s="instagram"></div>
+        <div class="field"><label>WhatsApp channel link</label><input class="in" data-s="channel"></div>
+        <div class="field" style="margin:0"><label>About text (footer)</label><textarea class="in" data-s="about"></textarea></div>
+      </div>
+
+      <div class="sec-title">Top banner</div>
+      <div class="card" style="padding:16px">
+        <div class="field"><label>Big headline (3 lines)</label>
+          <div style="display:grid;gap:8px"><input class="in" data-s="hero1"><input class="in" data-s="hero2"><input class="in" data-s="hero3"></div>
+          <small>The middle line shows in black.</small></div>
+        <div class="field"><label>Text under headline</label><textarea class="in" data-s="heroText"></textarea></div>
+        <div class="field" style="margin:0"><label>Stickers</label>
+          <div style="display:grid;gap:8px"><input class="in" data-s="sticker1"><input class="in" data-s="sticker3"><input class="in" data-s="sticker2"></div></div>
+      </div>
+
+      <div class="sec-title">Shop section</div>
+      <div class="card" style="padding:16px">
+        <div class="field"><label>Title</label><input class="in" data-s="shopTitle"></div>
+        <div class="field"><label>Text</label><input class="in" data-s="shopText"></div>
+        <div class="field" style="margin:0"><label>Scrolling club names</label><textarea class="in" data-s="marquee"></textarea><small>Separate with commas.</small></div>
+      </div>
+
+      <div class="sec-title">Custom prints section</div>
+      <div class="card" style="padding:16px">
+        <div class="field"><label>Photo</label>
+          <div style="display:flex;align-items:center;gap:12px"><img id="sCust" style="width:80px;height:80px;border-radius:12px;object-fit:cover;background:var(--bg)"><label class="btn b-line" style="height:42px">Change photo<input type="file" accept="image/*" id="custFile" hidden></label></div></div>
+        <div class="field"><label>Title</label><input class="in" data-s="customTitle"></div>
+        <div class="field" style="margin:0"><label>Text</label><textarea class="in" data-s="customText"></textarea></div>
+      </div>
+
+      <div class="savebar"><button class="btn b-green full" id="saveSettings">Save settings</button></div>
+
+      <div class="sec-title">Photos</div>
+      <div class="card" style="padding:16px">
+        <p style="line-height:1.5;margin-bottom:12px" id="impInfo"></p>
+        <button class="btn b-line full" id="importBtn">Copy photos from Take.app</button>
+      </div>
+
+      <div class="sec-title">Account</div>
+      <div class="card" style="padding:16px"><button class="btn b-red full" id="logout">Log out</button></div>
+    </div>
+  </main>
+
+  <nav class="tabs">
+    <button data-tab="products" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3l-5 3 2 5 3-1v11h8V10l3 1 2-5-5-3c-.5 1.7-2 3-4 3S8.5 4.7 8 3z"/></svg>Products</button>
+    <button data-tab="categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Categories</button>
+    <button data-tab="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Settings</button>
+  </nav>
+</section>
+
+<!-- PRODUCT EDITOR -->
+<div class="sheet" id="editor">
+  <header>
+    <button class="btn b-line" id="edCancel">Cancel</button>
+    <b id="edTitle">New product</b>
+    <button class="btn b-green" id="edSave">Save</button>
+  </header>
+  <div class="body">
+    <div class="field"><label>Photos</label>
+      <div class="photos" id="edPhotos"></div>
+      <small>Tap “Cover” to choose the main photo. Up to 6 photos.</small>
+      <input type="file" accept="image/*" multiple id="edFile" hidden>
+    </div>
+    <div class="field"><label>Name</label><input class="in" id="edName" placeholder="e.g. Arsenal Home 26/27"></div>
+    <div class="field"><label>Label</label><input class="in" id="edLabel" list="labels" placeholder="e.g. Fan Version"><datalist id="labels"><option>Fan Version</option><option>Player Version</option><option>Kids</option><option>Formula 1</option><option>Rugby</option><option>International</option></datalist></div>
+    <div class="row2">
+      <div class="field"><label>Price (Ksh)</label><input class="in" id="edPrice" inputmode="numeric" placeholder="1499"></div>
+      <div class="field"><label>Old price <span style="color:var(--mute);font-weight:500">(optional)</span></label><input class="in" id="edWas" inputmode="numeric" placeholder="Shows SALE"></div>
+    </div>
+    <div class="field"><label>Categories</label><div class="cchips" id="edCats"></div></div>
+    <div class="field"><label>Sizes</label>
+      <div class="presets"><button data-sz="S, M, L, XL, XXL">Adult S–XXL</button><button data-sz="4-5y, 6-7y, 8-9y, 10-11y, 12-13y">Kids</button><button data-sz="One size">One size</button></div>
+      <input class="in" id="edSizes"><small>Separate with commas.</small></div>
+    <div class="card" style="margin:18px 0">
+      <div class="swrow"><div><b>Sold out</b><small>Shows “Sold out”, can't be ordered</small></div><label class="sw"><input type="checkbox" id="edOut"><span></span></label></div>
+      <div class="swrow"><div><b>Hide from store</b><small>Customers won't see it</small></div><label class="sw"><input type="checkbox" id="edHidden"><span></span></label></div>
+      <div class="swrow"><div><b>Feature on homepage</b><small>Shows in the big top banner + “New” tag</small></div><label class="sw"><input type="checkbox" id="edFeat"><span></span></label></div>
+    </div>
+    <button class="btn b-red full hide" id="edDelete">Delete product</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => [...document.querySelectorAll(s)];
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const ksh = (n) => "Ksh " + Number(n || 0).toLocaleString("en-KE");
+let token = null, store = null, tab = "products", pf = "all", reorder = false;
+try { token = localStorage.getItem("sk254admin"); } catch (e) {}
+
+let tt;
+function toast(msg, bad) { const t = $("#toast"); t.textContent = msg; t.classList.toggle("bad", !!bad); t.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("on"), 2400); }
+
+async function api(path, opts = {}) {
+  const res = await fetch(path, { ...opts, headers: { ...(opts.headers || {}), authorization: "Bearer " + token } });
+  const data = await res.json().catch(() => ({}));
+  if (res.status === 401 && path !== "/api/login") { logout(); throw new Error("Please log in again"); }
+  if (!res.ok) throw new Error(data.error || "Something went wrong");
+  return data;
+}
+async function save(msg = "Saved ✓") {
+  try { await api("/api/store", { method: "PUT", headers: { "content-type": "application/json" }, body: JSON.stringify(store) }); toast(msg); return true; }
+  catch (e) { toast(e.message, true); return false; }
+}
+
+/* ---------- boot / login ---------- */
+async function boot() {
+  store = await fetch("/api/store", { cache: "no-store" }).then((r) => r.json());
+  $("#lLogo").src = $("#hLogo").src = store.settings.logo;
+  if (token) showApp(); else showLogin();
+}
+function showLogin() { $("#app").classList.add("hide"); $("#login").classList.remove("hide"); }
+function showApp() { $("#login").classList.add("hide"); $("#app").classList.remove("hide"); renderAll(); }
+function logout() { token = null; try { localStorage.removeItem("sk254admin"); } catch (e) {} showLogin(); }
+$("#loginForm").onsubmit = async (e) => {
+  e.preventDefault(); $("#loginErr").textContent = ""; $("#loginBtn").disabled = true;
+  try {
+    const r = await fetch("/api/login", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ password: $("#pw").value }) });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || "Couldn't log in");
+    token = d.token; try { localStorage.setItem("sk254admin", token); } catch (e) {}
+    $("#pw").value = ""; showApp();
+  } catch (err) { $("#loginErr").textContent = err.message; }
+  $("#loginBtn").disabled = false;
+};
+$("#logout").onclick = logout;
+
+/* ---------- tabs ---------- */
+$$("nav.tabs button").forEach((b) => (b.onclick = () => setTab(b.dataset.tab)));
+function setTab(t) {
+  tab = t;
+  $$("nav.tabs button").forEach((b) => b.classList.toggle("on", b.dataset.tab === t));
+  ["products", "categories", "settings"].forEach((v) => $("#v-" + v).classList.toggle("hide", v !== t));
+  $("#hTitle").textContent = { products: "Products", categories: "Categories", settings: "Settings" }[t];
+  scrollTo(0, 0); renderAll();
+}
+function renderAll() { renderProducts(); renderCats(); renderSettings(); }
+
+/* ---------- products list ---------- */
+const PF = [["all", "All"], ["live", "In stock"], ["out", "Sold out"], ["hidden", "Hidden"], ["feat", "Featured"]];
+$("#pfilters").innerHTML = PF.map(([k, l]) => `<button class="fchip${k === "all" ? " on" : ""}" data-f="${k}">${l}</button>`).join("");
+$("#pfilters").onclick = (e) => { const b = e.target.closest(".fchip"); if (!b) return; pf = b.dataset.f; $$(".fchip").forEach((c) => c.classList.toggle("on", c === b)); renderProducts(); };
+$("#search").oninput = renderProducts;
+$("#reorderBtn").onclick = () => { reorder = !reorder; $("#reorderBtn").textContent = reorder ? "Done" : "Reorder"; $("#reorderBtn").className = "btn " + (reorder ? "b-ink" : "b-line"); renderProducts(); };
+
+function renderProducts() {
+  const q = $("#search").value.trim().toLowerCase();
+  const list = store.products.map((p, i) => ({ p, i })).filter(({ p }) =>
+    (!q || (p.name + " " + p.label).toLowerCase().includes(q)) &&
+    (pf === "all" || (pf === "live" && !p.out && !p.hidden) || (pf === "out" && p.out) || (pf === "hidden" && p.hidden) || (pf === "feat" && p.featured)));
+  $("#plist").innerHTML = list.length ? list.map(({ p, i }) => `
+    <div class="prow" data-i="${i}">
+      <img class="th" src="${esc(p.imgs?.[0] || "")}" alt="" loading="lazy">
+      <button class="info" data-edit="${i}">
+        <div class="nm">${esc(p.name)}</div>
+        <div class="sub">${esc(p.label)} · ${ksh(p.price)}</div>
+        <div class="pills">${p.out ? '<span class="pill out">Sold out</span>' : ""}${p.hidden ? '<span class="pill hid">Hidden</span>' : ""}${p.featured ? '<span class="pill feat">Featured</span>' : ""}${p.was ? '<span class="pill sale">Sale</span>' : ""}</div>
+      </button>
+      ${reorder ? `<div class="mv"><button data-up="${i}">↑</button><button data-down="${i}">↓</button></div>`
+        : `<label class="instock"><span class="sw"><input type="checkbox" data-stock="${i}" ${p.out ? "" : "checked"}><span></span></span>In stock</label>`}
+    </div>`).join("") : `<div class="empty">No products here.</div>`;
+  $("#addBtn").classList.toggle("hide", reorder);
+}
+$("#plist").onclick = async (e) => {
+  const ed = e.target.closest("[data-edit]"); if (ed) return openEditor(+ed.dataset.edit);
+  const up = e.target.closest("[data-up]"), dn = e.target.closest("[data-down]");
+  if (up || dn) {
+    const i = +(up || dn).dataset[up ? "up" : "down"], j = up ? i - 1 : i + 1;
+    if (j < 0 || j >= store.products.length) return;
+    [store.products[i], store.products[j]] = [store.products[j], store.products[i]];
+    renderProducts(); save("Order saved ✓");
+  }
+};
+$("#plist").onchange = async (e) => {
+  const s = e.target.closest("[data-stock]"); if (!s) return;
+  const p = store.products[+s.dataset.stock]; p.out = !s.checked;
+  renderProducts(); save(p.out ? `${p.name}: sold out` : `${p.name}: back in stock`);
+};
+
+/* ---------- editor ---------- */
+let edIndex = -1, ed = null, uploading = 0;
+function blankProduct() { return { id: "p" + Date.now().toString(36), name: "", label: "Fan Version", price: "", was: null, imgs: [], cats: [], sizes: ["S", "M", "L", "XL", "XXL"], out: false, hidden: false, featured: false }; }
+function openEditor(i) {
+  edIndex = i; ed = JSON.parse(JSON.stringify(i >= 0 ? store.products[i] : blankProduct()));
+  $("#edTitle").textContent = i >= 0 ? "Edit product" : "New product";
+  $("#edName").value = ed.name; $("#edLabel").value = ed.label || ""; $("#edPrice").value = ed.price || ""; $("#edWas").value = ed.was || "";
+  $("#edSizes").value = (ed.sizes || []).join(", ");
+  $("#edOut").checked = !!ed.out; $("#edHidden").checked = !!ed.hidden; $("#edFeat").checked = !!ed.featured;
+  $("#edDelete").classList.toggle("hide", i < 0);
+  drawPhotos(); drawEdCats();
+  $("#editor").scrollTop = 0; $("#editor").classList.add("on"); document.body.style.overflow = "hidden";
+}
+function closeEditor() { $("#editor").classList.remove("on"); document.body.style.overflow = ""; }
+function drawPhotos() {
+  $("#edPhotos").innerHTML = ed.imgs.map((u, k) => `<div class="ph"><img src="${esc(u)}" alt=""><button class="rm" data-rm="${k}">✕</button><button class="cov${k === 0 ? " is" : ""}" data-cov="${k}">${k === 0 ? "Cover" : "Make cover"}</button></div>`).join("")
+    + Array.from({ length: uploading }, () => `<div class="ph"><div class="spin">Uploading…</div></div>`).join("")
+    + (ed.imgs.length + uploading < 6 ? `<button class="ph add" id="addPhoto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h2l2-2h6l2 2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg>Add photo</button>` : "");
+}
+$("#edPhotos").onclick = (e) => {
+  if (e.target.closest("#addPhoto")) return $("#edFile").click();
+  const rm = e.target.closest("[data-rm]"); if (rm) { ed.imgs.splice(+rm.dataset.rm, 1); return drawPhotos(); }
+  const cv = e.target.closest("[data-cov]"); if (cv) { const k = +cv.dataset.cov; ed.imgs.unshift(ed.imgs.splice(k, 1)[0]); drawPhotos(); }
+};
+$("#edFile").onchange = async (e) => {
+  const files = [...e.target.files].slice(0, 6 - ed.imgs.length); e.target.value = "";
+  uploading += files.length; drawPhotos();
+  await Promise.all(files.map(async (f) => {
+    try { ed.imgs.push(await uploadPhoto(f)); } catch (err) { toast(err.message, true); }
+    uploading--; drawPhotos();
+  }));
+};
+async function shrink(file, max = 1400) {
+  const bmp = await createImageBitmap(file);
+  const s = Math.min(1, max / Math.max(bmp.width, bmp.height));
+  const c = document.createElement("canvas"); c.width = Math.round(bmp.width * s); c.height = Math.round(bmp.height * s);
+  c.getContext("2d").drawImage(bmp, 0, 0, c.width, c.height);
+  return new Promise((r) => c.toBlob(r, "image/jpeg", 0.84));
+}
+async function uploadPhoto(file) {
+  const blob = await shrink(file);
+  const d = await api("/api/upload", { method: "POST", headers: { "content-type": "image/jpeg" }, body: blob });
+  return d.url;
+}
+function drawEdCats() {
+  $("#edCats").innerHTML = store.categories.map((c) => `<button class="cchip${ed.cats.includes(c.id) ? " on" : ""}" data-c="${esc(c.id)}">${esc(c.name)}</button>`).join("") || `<span style="color:var(--mute)">No categories yet. Add some in the Categories tab.</span>`;
+}
+$("#edCats").onclick = (e) => { const b = e.target.closest("[data-c]"); if (!b) return; const id = b.dataset.c; ed.cats = ed.cats.includes(id) ? ed.cats.filter((x) => x !== id) : [...ed.cats, id]; drawEdCats(); };
+$$(".presets button").forEach((b) => (b.onclick = () => ($("#edSizes").value = b.dataset.sz)));
+$("#edCancel").onclick = closeEditor;
+$("#edSave").onclick = async () => {
+  if (uploading) return toast("Wait for photos to finish uploading", true);
+  ed.name = $("#edName").value.trim(); ed.label = $("#edLabel").value.trim();
+  ed.price = parseInt($("#edPrice").value.replace(/\D/g, ""), 10) || 0;
+  const was = parseInt($("#edWas").value.replace(/\D/g, ""), 10); ed.was = was > ed.price ? was : null;
+  ed.sizes = $("#edSizes").value.split(",").map((s) => s.trim()).filter(Boolean);
+  ed.out = $("#edOut").checked; ed.hidden = $("#edHidden").checked; ed.featured = $("#edFeat").checked;
+  if (!ed.name) return toast("Add a name", true);
+  if (!ed.price) return toast("Add a price", true);
+  if (!ed.imgs.length) return toast("Add at least one photo", true);
+  if (!ed.sizes.length) return toast("Add sizes", true);
+  const before = JSON.stringify(store.products);
+  if (edIndex >= 0) store.products[edIndex] = ed; else store.products.unshift(ed);
+  $("#edSave").disabled = true;
+  const ok = await save(edIndex >= 0 ? "Saved ✓" : "Product added ✓");
+  $("#edSave").disabled = false;
+  if (!ok) { store.products = JSON.parse(before); return; }
+  closeEditor(); renderProducts();
+};
+$("#edDelete").onclick = async () => {
+  if (!confirm(`Delete "${ed.name}"? This can't be undone.`)) return;
+  store.products.splice(edIndex, 1);
+  if (await save("Deleted")) { closeEditor(); renderProducts(); }
+};
+$("#addBtn").onclick = () => openEditor(-1);
+
+/* ---------- categories ---------- */
+function renderCats() {
+  const count = (id) => store.products.filter((p) => p.cats.includes(id)).length;
+  $("#clist").innerHTML = store.categories.map((c, i) => `
+    <div class="crow"><input class="in" data-cn="${i}" value="${esc(c.name)}"><span class="cnt">${count(c.id)} items</span>
+    <button class="icon-btn" data-cu="${i}">↑</button><button class="icon-btn del" data-cd="${i}">✕</button></div>`).join("") || `<div class="empty">No categories yet.</div>`;
+}
+$("#clist").onchange = (e) => { const n = e.target.closest("[data-cn]"); if (!n) return; const v = n.value.trim(); if (!v) return renderCats(); store.categories[+n.dataset.cn].name = v; save("Renamed ✓"); };
+$("#clist").onclick = (e) => {
+  const u = e.target.closest("[data-cu]"), d = e.target.closest("[data-cd]");
+  if (u) { const i = +u.dataset.cu; if (!i) return; [store.categories[i - 1], store.categories[i]] = [store.categories[i], store.categories[i - 1]]; renderCats(); save("Order saved ✓"); }
+  if (d) { const c = store.categories[+d.dataset.cd]; if (!confirm(`Delete category "${c.name}"? Products stay, they just leave this category.`)) return;
+    store.categories.splice(+d.dataset.cd, 1); store.products.forEach((p) => (p.cats = p.cats.filter((x) => x !== c.id))); renderCats(); save("Category deleted"); }
+};
+$("#addCat").onclick = () => {
+  const name = $("#newCat").value.trim(); if (!name) return;
+  let id = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "cat"; while (store.categories.some((c) => c.id === id)) id += "-2";
+  store.categories.push({ id, name }); $("#newCat").value = ""; renderCats(); save("Category added ✓");
+};
+
+/* ---------- settings ---------- */
+function renderSettings() {
+  $$("[data-s]").forEach((el) => (el.value = store.settings[el.dataset.s] ?? ""));
+  $("#sLogo").src = store.settings.logo; $("#sCust").src = store.settings.customImg;
+  const left = [...store.products.flatMap((p) => p.imgs), store.settings.logo, store.settings.customImg].filter((s) => s && !s.startsWith("/img/")).length;
+  $("#impInfo").innerHTML = left ? `<b>${left} photos</b> are still loaded from Take.app. Copy them here <b>before</b> you cancel Take.app, or they'll disappear.` : `✓ All photos are stored on your own site.`;
+  $("#importBtn").classList.toggle("hide", !left);
+}
+$("#saveSettings").onclick = async () => {
+  $$("[data-s]").forEach((el) => (store.settings[el.dataset.s] = el.value.trim()));
+  store.settings.whatsapp = store.settings.whatsapp.replace(/\D/g, "");
+  $("#saveSettings").disabled = true; await save("Settings saved ✓"); $("#saveSettings").disabled = false;
+};
+const imgSetting = (input, key, preview) => ($(input).onchange = async (e) => {
+  const f = e.target.files[0]; e.target.value = ""; if (!f) return;
+  toast("Uploading…");
+  try { store.settings[key] = await uploadPhoto(f); $(preview).src = store.settings[key]; if (key === "logo") $("#hLogo").src = store.settings.logo; await save("Photo updated ✓"); }
+  catch (err) { toast(err.message, true); }
+});
+imgSetting("#logoFile", "logo", "#sLogo"); imgSetting("#custFile", "customImg", "#sCust");
+$("#importBtn").onclick = async () => {
+  $("#importBtn").disabled = true; $("#importBtn").textContent = "Copying… (about 30 seconds)";
+  try { const d = await api("/api/import-images", { method: "POST" }); store = d.store; toast(d.left ? `Copied ${d.moved}. Tap again for the rest.` : `Done, copied ${d.moved} photos ✓`, !!d.failed); renderAll(); }
+  catch (e) { toast(e.message, true); }
+  $("#importBtn").disabled = false; $("#importBtn").textContent = "Copy photos from Take.app";
+};
+
+boot().catch(() => { document.body.innerHTML = '<p style="padding:40px;text-align:center">Couldn\'t load the store. Check your internet and refresh.</p>'; });
+</script>
+</body>
+</html>

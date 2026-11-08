@@ -1,5 +1,8 @@
 {
   "name": "sk254-site",
+  "main": "src/index.js",
   "compatibility_date": "2026-10-01",
-  "assets": { "directory": "./public" }
+  "workers_dev": true,
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "kv_namespaces": [{ "binding": "KV", "id": "7d8991a850984562978fb25eb69bb98a" }]
 }

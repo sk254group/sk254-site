@@ -1,0 +1,558 @@
+{
+ "settings": {
+  "name": "SK254",
+  "whatsapp": "254737170911",
+  "logo": "https://cdn3.take.app/media/cmes2146r000004l3d03dbj4h.png?width=256",
+  "hero1": "Jerseys",
+  "hero2": "On",
+  "hero3": "Jerseys",
+  "heroText": "Official licensed kits from the clubs you live for. Fan & Player Versions. Delivered across Kenya.",
+  "sticker1": "100% Official",
+  "sticker2": "From Ksh 1,499",
+  "sticker3": "26/27 Season",
+  "marquee": "Arsenal, Chelsea, Barça, Bayern, Real Madrid, PSG, Man United, Man City, Spurs, Harambee Stars, F1",
+  "shopTitle": "New Drops",
+  "shopText": "Tap a kit, pick your size, order straight to WhatsApp. Easy.",
+  "customTitle": "Your name. Your number.",
+  "customText": "Team kits, cricket whites and dry-fit tees, custom printed by SK254.",
+  "customImg": "https://cdn3.take.app/media/cmh5x11oj000004l5e8budw4b.png?width=1000",
+  "about": "Soccer Kits 254. Official licensed merchandise. Exclusively authentic.",
+  "instagram": "soccerkits254",
+  "channel": "https://whatsapp.com/channel/0029Vb6JQKz2ER6jKnTS8H2e"
+ },
+ "categories": [
+  {
+   "id": "epl",
+   "name": "Premier League"
+  },
+  {
+   "id": "europe",
+   "name": "Europe"
+  },
+  {
+   "id": "player",
+   "name": "Player Version"
+  },
+  {
+   "id": "fan",
+   "name": "Fan Version"
+  },
+  {
+   "id": "kids",
+   "name": "Kids"
+  },
+  {
+   "id": "f1",
+   "name": "Formula 1"
+  },
+  {
+   "id": "rugby",
+   "name": "Rugby"
+  },
+  {
+   "id": "world",
+   "name": "International"
+  }
+ ],
+ "products": [
+  {
+   "id": "p1",
+   "name": "Arsenal Home 26/27",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmt2z4sn100080aki2ebf17h4.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": true
+  },
+  {
+   "id": "p2",
+   "name": "Man United Away 26/27",
+   "label": "Player Version",
+   "price": 1599,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtdrb30300000ahudnrg0rng.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": true
+  },
+  {
+   "id": "p3",
+   "name": "Barcelona Home 26/27",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpg506000209ktgcdkb09q.jpg?width=1200"
+   ],
+   "cats": [
+    "europe",
+    "fan"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": true
+  },
+  {
+   "id": "p4",
+   "name": "PSG Night Edition 26/27",
+   "label": "Player Version",
+   "price": 1599,
+   "was": 2000,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqgazx00020aj8e34gah9t.jpg?width=1200"
+   ],
+   "cats": [
+    "europe",
+    "player"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": true
+  },
+  {
+   "id": "p5",
+   "name": "Chelsea Home 26/27",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpzm0b00010aht6e9yavbi.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p6",
+   "name": "Bayern Munich Home 26/27",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqhidg00020akt81gdca4l.jpg?width=1200"
+   ],
+   "cats": [
+    "europe",
+    "fan"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p7",
+   "name": "Man City Home 26/27",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbp5d7j00040akm8e3zanj2.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p8",
+   "name": "Man United Home 26/27",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpbfl900000aki1if6hvnf.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p9",
+   "name": "Real Madrid Away 26/27",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmeprfvy4000004l9clrpaz1x.jpeg?width=1200"
+   ],
+   "cats": [
+    "europe",
+    "player"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p10",
+   "name": "Arsenal Home 26/27",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmetzw4t1000304ju0jtr16vc.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p11",
+   "name": "Arsenal Away 26/27",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbov5cm00000bkx2nzx2lmb.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p12",
+   "name": "Tottenham Home 26/27",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmewyldj6000204ld8o2rfiip.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p13",
+   "name": "Marseille Away 26/27",
+   "label": "Player Version",
+   "price": 1500,
+   "was": 2000,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpr8ae00000akr5tsc7w73.jpg?width=1200"
+   ],
+   "cats": [
+    "europe",
+    "player"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p14",
+   "name": "Liverpool Home 26/27",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmepw4b29000104kzbj3m5eve.jpeg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p15",
+   "name": "Original F1 Team Jerseys",
+   "label": "Formula 1",
+   "price": 3499,
+   "was": 3999,
+   "imgs": [
+    "https://cdn3.take.app/media/cmq463eqm00000bhwdmk288rd.jpg?width=1200"
+   ],
+   "cats": [
+    "f1"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p16",
+   "name": "Rugby Selection",
+   "label": "Rugby",
+   "price": 3500,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtdrps1s00000akqeyfjbbo6.jpg?width=1200"
+   ],
+   "cats": [
+    "rugby"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p17",
+   "name": "World Cup 2026 Kits",
+   "label": "International",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmq43nwjq00000bksefiqe7tf.jpg?width=1200"
+   ],
+   "cats": [
+    "world"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p18",
+   "name": "Man City Kids 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbp7qmt00000akp2gsb7fw9.jpg?width=1200"
+   ],
+   "cats": [
+    "kids"
+   ],
+   "sizes": [
+    "4-5y",
+    "6-7y",
+    "8-9y",
+    "10-11y",
+    "12-13y"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p19",
+   "name": "Chelsea Kids Home",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbq0ljz00000akrckka55no.jpg?width=1200"
+   ],
+   "cats": [
+    "kids"
+   ],
+   "sizes": [
+    "4-5y",
+    "6-7y",
+    "8-9y",
+    "10-11y",
+    "12-13y"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p20",
+   "name": "Kenya FKF Kids",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmeq00mdn000v04l11zkq5huf.jpeg?width=1200"
+   ],
+   "cats": [
+    "kids",
+    "world"
+   ],
+   "sizes": [
+    "4-5y",
+    "6-7y",
+    "8-9y",
+    "10-11y",
+    "12-13y"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  },
+  {
+   "id": "p21",
+   "name": "Kenya Rugby Kids Red",
+   "label": "Kids",
+   "price": 1999,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmgzd5c1z000004kz57i98r62.jpg?width=1200"
+   ],
+   "cats": [
+    "kids",
+    "rugby"
+   ],
+   "sizes": [
+    "4-5y",
+    "6-7y",
+    "8-9y",
+    "10-11y",
+    "12-13y"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false
+  }
+ ]
+}
