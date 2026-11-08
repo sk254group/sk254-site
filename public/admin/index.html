@@ -123,7 +123,8 @@ textarea.in{height:auto;min-height:84px;padding:12px 14px;resize:vertical;line-h
 
 /* toast */
 .toast{position:fixed;left:50%;top:calc(16px + env(safe-area-inset-top));transform:translate(-50%,-160%);z-index:99;background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .3s;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.2)}
-.toast.on{transform:translate(-50%,0)}
+.toast{opacity:0}.toast.on{transform:translate(-50%,0);opacity:1}
+.field label.btn{display:inline-flex;margin:0;font-size:15px}
 .toast.bad{background:var(--red)}
 .savebar{position:sticky;bottom:calc(70px + env(safe-area-inset-bottom));margin-top:18px}
 </style>
