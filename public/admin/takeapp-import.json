@@ -1,0 +1,1829 @@
+{
+ "categories": [
+  {
+   "id": "football",
+   "name": "Football"
+  },
+  {
+   "id": "world-cup-2026",
+   "name": "World Cup 2026"
+  },
+  {
+   "id": "epl",
+   "name": "Premier League"
+  },
+  {
+   "id": "kids-youth",
+   "name": "Kids / Youth"
+  },
+  {
+   "id": "rompers",
+   "name": "Rompers"
+  },
+  {
+   "id": "world-football-jerseys",
+   "name": "World Football Jerseys"
+  },
+  {
+   "id": "special-edition-kits",
+   "name": "Special Edition Kits"
+  },
+  {
+   "id": "la-liga",
+   "name": "La Liga"
+  },
+  {
+   "id": "bundesliga",
+   "name": "Bundesliga"
+  },
+  {
+   "id": "ligue1",
+   "name": "Ligue 1"
+  },
+  {
+   "id": "serie-a",
+   "name": "Serie A"
+  },
+  {
+   "id": "fan-kits",
+   "name": "Fan Kits"
+  },
+  {
+   "id": "kenya",
+   "name": "Kenya"
+  },
+  {
+   "id": "player-version",
+   "name": "Player Version"
+  },
+  {
+   "id": "formula-1",
+   "name": "Formula 1"
+  },
+  {
+   "id": "rugby",
+   "name": "Rugby"
+  },
+  {
+   "id": "cricket",
+   "name": "Cricket"
+  },
+  {
+   "id": "items",
+   "name": "Items"
+  },
+  {
+   "id": "custom-prints",
+   "name": "Custom Prints"
+  }
+ ],
+ "products": [
+  {
+   "id": "t04kxyzchu5",
+   "name": "⏪ SPECIAL JERSEYS⏩",
+   "label": "Football",
+   "price": 1999,
+   "was": 2000,
+   "imgs": [
+    "https://cdn3.take.app/media/cmg3flix1000a04lbaivvcrap.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg3flivf000904lb7lcp6ifg.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg3flip1000704lb4jig4fgx.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg3fliy5000b04lb9regbek5.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg3flirf000804lb0e4wati2.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg3flipg000004ib402215pg.jpg?width=1200"
+   ],
+   "cats": [
+    "football",
+    "special-edition-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmewzcqkv001kjr04kxyzchu5"
+  },
+  {
+   "id": "t046l9xzgb2",
+   "name": "SOCCER BALLS",
+   "label": "Football",
+   "price": 2999,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmftngjni000004ifcntj7j0m.jpg?width=1200",
+    "https://cdn3.take.app/media/cmftngjn2000104lhbdo7b5kd.jpg?width=1200",
+    "https://cdn3.take.app/media/cmftngjns000004l2eknu9yol.jpg?width=1200",
+    "https://cdn3.take.app/media/cmftngjnr000204juccqsd87b.jpg?width=1200",
+    "https://cdn3.take.app/media/cmftngjng000204lh9ty3f86g.jpg?width=1200",
+    "https://cdn3.take.app/media/cmftngjns000004la8pk0al10.jpg?width=1200"
+   ],
+   "cats": [
+    "football"
+   ],
+   "sizes": [
+    "Orange",
+    "Yellow",
+    "Purple"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmfte92np002mla046l9xzgb2"
+  },
+  {
+   "id": "t04bs1eui1u",
+   "name": "MIKASA SOCCER BALLS",
+   "label": "Football",
+   "price": 3499,
+   "was": 4200,
+   "imgs": [
+    "https://cdn3.take.app/media/cmg9lks3t000504l817qde2qy.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg9lks3x000004jo21zmbici.jpg?width=1200"
+   ],
+   "cats": [
+    "football"
+   ],
+   "sizes": [
+    "One size"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg9ljkxs000tjr04bs1eui1u"
+  },
+  {
+   "id": "thv0uh86srb",
+   "name": "FIFA Word Cup ⚽",
+   "label": "World Cup 2026",
+   "price": 1300,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmq0ddnvz00010bjk63qweq7z.jpg?width=1200",
+    "https://cdn3.take.app/media/cmq0ddo7400070bkq21bi13b5.jpg?width=1200",
+    "https://cdn3.take.app/media/cmq0ddnvy00010bkqfn2ego2s.jpg?width=1200",
+    "https://cdn3.take.app/media/cmq0ddnx200010cj7bnk8h89c.jpg?width=1200",
+    "https://cdn3.take.app/media/cmq0ddnwn00030bkq4imn3xw4.jpg?width=1200",
+    "https://cdn3.take.app/media/cmq0ddo2400030bjgb45f6b2w.jpg?width=1200"
+   ],
+   "cats": [
+    "world-cup-2026"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "Player's Version",
+    "Soccer Balls",
+    "Big Flags"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmq0cxl6700010bhv0uh86srb"
+  },
+  {
+   "id": "t04l33sct6z",
+   "name": "Arsenal Home - 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmety3qrj000504kv58eb8auy.jpeg?width=1200",
+    "https://cdn3.take.app/media/cmetzw4t5000304l7by9114co.jpg?width=1200",
+    "https://cdn3.take.app/media/cmetzw4t1000304ju0jtr16vc.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepuwu0e000mky04l33sct6z"
+  },
+  {
+   "id": "t04w9xgqd85",
+   "name": "Liverpool Home - 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmepw4b29000104kzbj3m5eve.jpeg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepw2t3n002ljx04w9xgqd85"
+  },
+  {
+   "id": "t04jzfgeyx1",
+   "name": "Manchester City Home - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbp5d7i00010akzeexv5q0e.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbp5d7v00010akse8wh9gc3.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbp5d7t00020akz381o3z63.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbp5d7j00040akm8e3zanj2.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmerfst3l008yl704jzfgeyx1"
+  },
+  {
+   "id": "t04d4kyrxi9",
+   "name": "Manchester United Home - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpbfl900000aki1if6hvnf.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmeprjzue000el404d4kyrxi9"
+  },
+  {
+   "id": "t04u8gfelc1",
+   "name": "Manchester United Away - 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1599,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtdrb30300000ahudnrg0rng.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": true,
+   "src": "takeapp:cmeprz7jy0001l204u8gfelc1"
+  },
+  {
+   "id": "t04n1g3cr40",
+   "name": "Arsenal Away - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbov5cm00000bkx2nzx2lmb.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbovknc00000akt7p3yhgc3.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepv0qeo000il804n1g3cr40"
+  },
+  {
+   "id": "t04w0jbocqb",
+   "name": "Tottenham Away - 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmepxzdyn000004l2e8ne6sjk.jpeg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepxxwhf001tkz04w0jbocqb"
+  },
+  {
+   "id": "t04pnfqn8rm",
+   "name": "Manchester City Kids 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbp7qmt00000akp2gsb7fw9.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbp8dne00010akphw2m5adl.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmerculg5000ml104pnfqn8rm"
+  },
+  {
+   "id": "t04gnjjxns2",
+   "name": "Chelsea Kids Home",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbq0ljz00000akrckka55no.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmercqyyh000fla04gnjjxns2"
+  },
+  {
+   "id": "t04j2nv0psf",
+   "name": "Chelsea Home - 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmerfwynr000404l7blg8awhc.jpeg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmerfw0cf0001ig04j2nv0psf"
+  },
+  {
+   "id": "t04a3g3zggz",
+   "name": "Chelsea Away - 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1600,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbq22m100000akk26tzftwm.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbq1vtu00000akohu0zhgin.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmerfykl1000gjo04a3g3zggz"
+  },
+  {
+   "id": "t04rbzacfnq",
+   "name": "Chelsea Away - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/clqacmvtm00000fl70kbr6vrk.png?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmerg334l0006lb04rbzacfnq"
+  },
+  {
+   "id": "t04cvq6db3y",
+   "name": "Manchester City Away - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpxc5j00000akugq8l17le.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmese9uo2005bl804cvq6db3y"
+  },
+  {
+   "id": "t04zhhh0agw",
+   "name": "Arsenal Home - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmt2z4t2n00000ajf93ix0691.jpg?width=1200",
+    "https://cdn3.take.app/media/cmt2z4ssp000a0akidgrrbhnc.jpg?width=1200",
+    "https://cdn3.take.app/media/cmt2z4sn100080aki2ebf17h4.jpg?width=1200",
+    "https://cdn3.take.app/media/cmt2z4snd00090akiepnygr8b.jpg?width=1200",
+    "https://cdn3.take.app/media/cmt2z4t0d00000aknfvvi2nbe.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": true,
+   "src": "takeapp:cmeu0b2bt000xih04zhhh0agw"
+  },
+  {
+   "id": "t044ha2qhv2",
+   "name": "Tottenham Home - 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmewyldj6000204ld8o2rfiip.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmewydwso000pl4044ha2qhv2"
+  },
+  {
+   "id": "t04uxgrm5lo",
+   "name": "Chelsea Kids",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbq7d2800000akr1dohbj2m.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmf99w2mh0009jo04uxgrm5lo"
+  },
+  {
+   "id": "t041czayvl4",
+   "name": "Chelsea Home 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpzbf000000akkg2jtc37w.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbpzm0b00010aht6e9yavbi.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmfts4g6l0006l5041czayvl4"
+  },
+  {
+   "id": "t04jedodt8n",
+   "name": "Arsenal Goalkeeper 26/27",
+   "label": "Premier League",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmg2j6j4g000104kze22c0924.jpg?width=1200"
+   ],
+   "cats": [
+    "epl"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg2cx32q003fla04jedodt8n"
+  },
+  {
+   "id": "t04fneqjb73",
+   "name": "Liverpool Home - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmt5nig2k00010al5bfse9bbv.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbokh4h00000ajg9vuu13m1.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg2cy4b4002ila04fneqjb73"
+  },
+  {
+   "id": "t04yy63a87p",
+   "name": "Manchester City Black - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpwp7m00000ajbhln07pp3.jpg?width=1200"
+   ],
+   "cats": [
+    "epl",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg6xtcen000sk704yy63a87p"
+  },
+  {
+   "id": "t04rulemlts",
+   "name": "Arsenal Kids Kit Home 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmt3rn32e00000ajsgbi82mnl.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepytsc4000nl704rulemlts"
+  },
+  {
+   "id": "t04w6cmls0x",
+   "name": "Kenya Kids FKF",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmeq00mdn000v04l11zkq5huf.jpeg?width=1200"
+   ],
+   "cats": [
+    "kids-youth",
+    "kenya"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepzdi7j0028l204w6cmls0x"
+  },
+  {
+   "id": "t040riuik40",
+   "name": "Manchester United Kids Kits",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbp3x5700000akj0rlkgwn4.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbp458d00020akj996aderd.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbp3ifi00010akt5hop0q2r.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmetxzqvl001jl1040riuik40"
+  },
+  {
+   "id": "t04lz7pwtt1",
+   "name": "Kenya Kids Rugby Red",
+   "label": "Kids",
+   "price": 1999,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmewyotds000e04l8fi2k9psu.jpg?width=1200",
+    "https://cdn3.take.app/media/cmgzd5c1z000004kz57i98r62.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth",
+    "kenya",
+    "rugby"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS",
+    "S30 - AGE 15-16 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmewynwrs001rl804lz7pwtt1"
+  },
+  {
+   "id": "t04s57lm84t",
+   "name": "Manchester United Kids 3rd Kits",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/clqacmvtm00000fl70kbr6vrk.png?width=1200"
+   ],
+   "cats": [
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS",
+    "S30- AGE 15-16 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmf189nwf000ljs04s57lm84t"
+  },
+  {
+   "id": "t04xvlu1i2c",
+   "name": "PSG Kids Home 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": 2000,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbq90kc000109kt439m60bt.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbq996t00000akjhlxzcg5w.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth",
+    "ligue1"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmfpn9gfo0007jj04xvlu1i2c"
+  },
+  {
+   "id": "t04kh8xnzn9",
+   "name": "Liverpool Kids Red 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtboj3yx000004l117ru5fiz.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg85xadk0043l504kh8xnzn9"
+  },
+  {
+   "id": "t04vpte90rq",
+   "name": "Arsenal Away Kids White 26/27",
+   "label": "Kids",
+   "price": 1498,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmg8759ar000304ifd12xhzut.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg86r49b0001ld04vpte90rq"
+  },
+  {
+   "id": "t04i5t1j5y2",
+   "name": "Manchester United Away Kids Blue 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbp16xm00010akl803ebxns.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg87i2h1000jjo04i5t1j5y2"
+  },
+  {
+   "id": "t04qjj6ko3b",
+   "name": "Arsenal Away Kids Blue 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbp05ve00040akrakt25vec.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtborzy100000ajb457ldc4r.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg87kvgf004bld04qjj6ko3b"
+  },
+  {
+   "id": "t04ak9jd0pn",
+   "name": "Barcelona Kids Home 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpj81800010aj82bjohqq9.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth",
+    "la-liga"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS",
+    "S30 - AGE 15-16 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmgzddlp1000pjn04ak9jd0pn"
+  },
+  {
+   "id": "t04i5rk497b",
+   "name": "Real Madrid Kids Home 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbplg6h00000akuht926fon.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbpm85r00010akd61gu4lul.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth",
+    "la-liga"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS",
+    "S30 - AGE 15-16 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmh4nh020002skz04i5rk497b"
+  },
+  {
+   "id": "t04o2n6lnex",
+   "name": "Arsenal Kids Kit Away 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/clqacmvtm00000fl70kbr6vrk.png?width=1200"
+   ],
+   "cats": [
+    "kids-youth"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmhr4stde000ljv04o2n6lnex"
+  },
+  {
+   "id": "tjf3gzxjh4x",
+   "name": "Real Madrid Kids Away 26/27",
+   "label": "Kids",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqbgfg000009hz8757f1dg.jpg?width=1200"
+   ],
+   "cats": [
+    "kids-youth",
+    "la-liga"
+   ],
+   "sizes": [
+    "S16 - AGE 1-2 YRS",
+    "S18 - AGE 3-4 YRS",
+    "S20 - AGE 5-6 YRS",
+    "S22 - AGE 7-8 YRS",
+    "S24 - AGE 9-10 YRS",
+    "S26 - AGE 11-12 YRS",
+    "S28 - AGE 13-14 YRS",
+    "S30 - AGE 15-16 YRS"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmtbqastg00030ajf3gzxjh4x"
+  },
+  {
+   "id": "t04rhgq6wl1",
+   "name": "Babies Rompers",
+   "label": "Rompers",
+   "price": 1500,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmewxzc59000904l1hphh3um8.jpg?width=1200",
+    "https://cdn3.take.app/media/cmewxzc4v000804l1hq6w7mmn.jpg?width=1200",
+    "https://cdn3.take.app/media/cmewxzc54000904ju7tn6gj3o.jpg?width=1200",
+    "https://cdn3.take.app/media/cmewxzc58000d04jj32fd5ywm.jpg?width=1200",
+    "https://cdn3.take.app/media/cmewxzc5j000604l4di3897sa.jpg?width=1200",
+    "https://cdn3.take.app/media/cmewxzc5j000g04jpgjw27esp.jpg?width=1200"
+   ],
+   "cats": [
+    "rompers"
+   ],
+   "sizes": [
+    "One size"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmewy2ske000ml704rhgq6wl1"
+  },
+  {
+   "id": "t0467isqro4",
+   "name": "Al Nassr Yellow Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqac9v00000aki2faj7uwv.jpg?width=1200"
+   ],
+   "cats": [
+    "world-football-jerseys",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmf180wbl000wl80467isqro4"
+  },
+  {
+   "id": "t04cg96rkum",
+   "name": "Palmeiras White Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmewykm6f000104ld96sxh4ag.jpg?width=1200"
+   ],
+   "cats": [
+    "world-football-jerseys"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmevfvnhc004dl704cg96rkum"
+  },
+  {
+   "id": "t04j40knnjy",
+   "name": "Inter Miami - Home Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmevfooc7000004lb7pgg8b4p.jpg?width=1200",
+    "https://cdn3.take.app/media/cmevfoock000a04l718iy6qb6.jpg?width=1200",
+    "https://cdn3.take.app/media/cmevfooc7000m04jx7mzp8s54.jpeg?width=1200"
+   ],
+   "cats": [
+    "world-football-jerseys"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "PLAYERS VERSION",
+    "KIDS",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmeu2czjd002dl404j40knnjy"
+  },
+  {
+   "id": "t04cttzzbq6",
+   "name": "Inter Miami Away - Black Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmeu28qak000104jofkc55bzk.jpeg?width=1200",
+    "https://cdn3.take.app/media/cmeu28qam000404jy4oosg9lj.jpeg?width=1200",
+    "https://cdn3.take.app/media/cmeu28qb0000204jo4sx3bqcp.jpeg?width=1200"
+   ],
+   "cats": [
+    "world-football-jerseys"
+   ],
+   "sizes": [
+    "XXL",
+    "4XL",
+    "L",
+    "KIDS",
+    "3XL",
+    "PLAYERS VERSION",
+    "XL",
+    "S",
+    "M"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmeu27px7000ml404cttzzbq6"
+  },
+  {
+   "id": "t04cc3ddoow",
+   "name": "Ajax Home PV 26/27",
+   "label": "Player Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmg9mcvqc000004i804abght8.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg9mcvc5000604jr5z87emcg.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg9mcvin000704jrfthggp75.jpg?width=1200"
+   ],
+   "cats": [
+    "world-football-jerseys"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg9m9iwe001djl04cc3ddoow"
+  },
+  {
+   "id": "t04v5p637mj",
+   "name": "PSG Night Edition 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1599,
+   "was": 2000,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqgb9000030aj854aobnv5.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbqgazx00020aj8e34gah9t.jpg?width=1200"
+   ],
+   "cats": [
+    "world-football-jerseys",
+    "ligue1",
+    "player-version"
+   ],
+   "sizes": [
+    "Small",
+    "Medium",
+    "Large",
+    "XL",
+    "2XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": true,
+   "src": "takeapp:cmglzysl8004pl804v5p637mj"
+  },
+  {
+   "id": "t04qydhfzq0",
+   "name": "Barcelona 3rd Jersey 26/27 Fans Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbphayv00000ahz2a9yakvv.jpg?width=1200"
+   ],
+   "cats": [
+    "la-liga",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepqdf7l0005le04qydhfzq0"
+  },
+  {
+   "id": "t049qevr6xk",
+   "name": "Real Madrid Away 26/27 Fans Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbppp5r000109ks6j736vna.jpg?width=1200"
+   ],
+   "cats": [
+    "la-liga",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepqux9o000gl2049qevr6xk"
+  },
+  {
+   "id": "t048jl04o13",
+   "name": "Real Madrid Away 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmeprfvy4000004l9clrpaz1x.jpeg?width=1200"
+   ],
+   "cats": [
+    "la-liga",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepqxhn10003jp048jl04o13"
+  },
+  {
+   "id": "t04srtj99py",
+   "name": "Real Madrid 3rd Kit 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpoqye00000akxb7636jrd.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbpp1j700000ajh489k46hs.jpg?width=1200"
+   ],
+   "cats": [
+    "la-liga",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmepr6nve000pl804srtj99py"
+  },
+  {
+   "id": "t04zxkhbis9",
+   "name": "Barcelona Home 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpg506000209ktgcdkb09q.jpg?width=1200"
+   ],
+   "cats": [
+    "la-liga",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": true,
+   "src": "takeapp:cmftoog54000vl904zxkhbis9"
+  },
+  {
+   "id": "t04xmrvbrcx",
+   "name": "Barcelona Away 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbphv8v00020akq4k7p6ioe.jpg?width=1200"
+   ],
+   "cats": [
+    "la-liga",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmfts9ip9000sl504xmrvbrcx"
+  },
+  {
+   "id": "t04imi90xpu",
+   "name": "Barcelona Pink 26/27 PV",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmg6xo3mx000404l5354137za.jpg?width=1200",
+    "https://cdn3.take.app/media/cmg6xo3ky000304l5axvwd4k8.jpg?width=1200"
+   ],
+   "cats": [
+    "la-liga",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg6xhm54000ujm04imi90xpu"
+  },
+  {
+   "id": "t04897yec2g",
+   "name": "Bayern Munich Home - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqhidc00010akxhj8dex6n.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbqhidg00020akt81gdca4l.jpg?width=1200"
+   ],
+   "cats": [
+    "bundesliga",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmevh3e1c001hl504897yec2g"
+  },
+  {
+   "id": "t043dr73p92",
+   "name": "Marseille Away 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1500,
+   "was": 2000,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbpr8ae00000akr5tsc7w73.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbpr89300000akwbscxffcq.jpg?width=1200"
+   ],
+   "cats": [
+    "ligue1",
+    "player-version"
+   ],
+   "sizes": [
+    "Small",
+    "Medium",
+    "Large",
+    "XL",
+    "2XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmgm0zvfm0001l2043dr73p92"
+  },
+  {
+   "id": "t04cg7z8lut",
+   "name": "AC Milan Home - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqeqa200040ajg116929dz.jpg?width=1200",
+    "https://cdn3.take.app/media/cmtbqeq9x00020aksfm4d9jq4.jpg?width=1200"
+   ],
+   "cats": [
+    "serie-a",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmer81m4h000nl404cg7z8lut"
+  },
+  {
+   "id": "t04yal5h8cn",
+   "name": "AC Milan Away - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqjjs300030ai30rp515d6.jpg?width=1200"
+   ],
+   "cats": [
+    "serie-a",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmer848z7000hle04yal5h8cn"
+  },
+  {
+   "id": "t04ly8ycmh2",
+   "name": "Inter Milan Home - 26/27 Fan Authentic",
+   "label": "Fan Version",
+   "price": 1499,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmtbqj2ld00000aji4yqbge2y.jpg?width=1200"
+   ],
+   "cats": [
+    "serie-a",
+    "fan-kits"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmfpnc8v0000llb04ly8ycmh2"
+  },
+  {
+   "id": "t04p4ljx88t",
+   "name": "Inter Milan Away - 26/27 PV",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmfpnmxpa000104l58s4n0upd.jpg?width=1200"
+   ],
+   "cats": [
+    "serie-a"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmfpnjsu7000al504p4ljx88t"
+  },
+  {
+   "id": "t04b04zzrut",
+   "name": "Juventus 3rd - 26/27",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmgzd836u000404l107qteu8o.jpg?width=1200",
+    "https://cdn3.take.app/media/cmgzd836r000004l8328v2a7m.jpg?width=1200"
+   ],
+   "cats": [
+    "serie-a",
+    "fan-kits",
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL",
+    "3XL",
+    "4XL"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmgzd6hmf0009i804b04zzrut"
+  },
+  {
+   "id": "t04v12xrb8u",
+   "name": "Liverpool Away - 26/27 PV (Slim Fit)",
+   "label": "Player Version",
+   "price": 1799,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmg6xz2p1000604l735c0alcz.jpg?width=1200"
+   ],
+   "cats": [
+    "player-version"
+   ],
+   "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "out": true,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmg6xyczm001cjl04v12xrb8u"
+  },
+  {
+   "id": "t04502thj4n",
+   "name": "Original F1 ⬅️ SWIPE FOR VARIETY ➡️",
+   "label": "Formula 1",
+   "price": 3499,
+   "was": 3999,
+   "imgs": [
+    "https://cdn3.take.app/media/cmf03sjku000304jq8aexf6lg.jpg?width=1200",
+    "https://cdn3.take.app/media/cmf03sjkf000204l7gmc28vlg.jpg?width=1200",
+    "https://cdn3.take.app/media/cmf03sjkz000104l78zik4x3w.jpg?width=1200",
+    "https://cdn3.take.app/media/cmf03sjkt000004gzc5w9g0jj.jpg?width=1200",
+    "https://cdn3.take.app/media/cmf03sjkr000004joay0i9uol.jpg?width=1200",
+    "https://cdn3.take.app/media/cmf03sjkq001004l5865gdhle.jpg?width=1200"
+   ],
+   "cats": [
+    "formula-1"
+   ],
+   "sizes": [
+    "One size"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmf03rjqf0009l704502thj4n"
+  },
+  {
+   "id": "t04pji35pdw",
+   "name": "Kenya Rugby -⬅️ SWIPE FOR VARIETY ➡️",
+   "label": "Rugby",
+   "price": 2999,
+   "was": 3500,
+   "imgs": [
+    "https://cdn3.take.app/media/cmetu9ijl000404lbdlry2alk.jpeg?width=1200",
+    "https://cdn3.take.app/media/cmetu9ijx000004l518e28dfa.jpeg?width=1200",
+    "https://cdn3.take.app/media/cmetu9ijk001b04lg0qeb1ag5.jpeg?width=1200",
+    "https://cdn3.take.app/media/cmetu9ijz001n04ie2pmc22q0.jpeg?width=1200",
+    "https://cdn3.take.app/media/cmetu9ik1000704l20p6y3r95.jpeg?width=1200",
+    "https://cdn3.take.app/media/cmetu9ijl000t04l52st8gm2d.jpeg?width=1200"
+   ],
+   "cats": [
+    "rugby"
+   ],
+   "sizes": [
+    "One size"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmetufhyj009zjn04pji35pdw"
+  },
+  {
+   "id": "t04xyxk3idj",
+   "name": "Cricket Custom",
+   "label": "Cricket",
+   "price": 1999,
+   "was": null,
+   "imgs": [
+    "https://cdn3.take.app/media/cmgvsd5v3000d04l14bha9oy4.jpg?width=1200",
+    "https://cdn3.take.app/media/cmgvsd5vi000404ingh2na4m9.jpg?width=1200"
+   ],
+   "cats": [
+    "cricket",
+    "custom-prints"
+   ],
+   "sizes": [
+    "Small to 5XL available - Cotton Print",
+    "Small to 5XL available - Polyester Print"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmgvsfe41006kkz04xyxk3idj"
+  },
+  {
+   "id": "t046wmqmqny",
+   "name": "Top quality Plain Dry fit T-shirts",
+   "label": "Custom Print",
+   "price": 999,
+   "was": 1200,
+   "imgs": [
+    "https://cdn3.take.app/media/cmh526tek000004kz9vg105dv.png?width=1200",
+    "https://cdn3.take.app/media/cmh52517l000004l41yjs58aw.png?width=1200",
+    "https://cdn3.take.app/media/cmh526dxz000104jj7ef2fnd1.png?width=1200",
+    "https://cdn3.take.app/media/cmh526dyp000104l71o20hvwd.png?width=1200",
+    "https://cdn3.take.app/media/cmh526dy4000204laf1a633u6.png?width=1200",
+    "https://cdn3.take.app/media/cmh526dyi000204l4f9uj9pzs.png?width=1200"
+   ],
+   "cats": [
+    "items",
+    "custom-prints"
+   ],
+   "sizes": [
+    "One size"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmh525kk60003jj046wmqmqny"
+  },
+  {
+   "id": "t04v2uaxdw2",
+   "name": "Top Quality Custom Tees",
+   "label": "Custom Print",
+   "price": 1999,
+   "was": 2500,
+   "imgs": [
+    "https://cdn3.take.app/media/cmh5x11oj000004l5e8budw4b.png?width=1200",
+    "https://cdn3.take.app/media/cmh5x11r1000504joczyp96jd.png?width=1200",
+    "https://cdn3.take.app/media/cmh5x125m000704jo3yj7hpiq.png?width=1200",
+    "https://cdn3.take.app/media/cmh5x11pa000104l59jdz1ayn.png?width=1200",
+    "https://cdn3.take.app/media/cmh5x11ow000104jm7mmthakb.png?width=1200",
+    "https://cdn3.take.app/media/cmh5x11ox000404i6dl3ec3zq.jpg?width=1200"
+   ],
+   "cats": [
+    "items",
+    "custom-prints"
+   ],
+   "sizes": [
+    "One size"
+   ],
+   "out": false,
+   "hidden": false,
+   "featured": false,
+   "src": "takeapp:cmh5v3mr70061l504v2uaxdw2"
+  }
+ ]
+}

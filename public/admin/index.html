@@ -211,9 +211,11 @@ textarea.in{height:auto;min-height:84px;padding:12px 14px;resize:vertical;line-h
 
       <div class="savebar"><button class="btn b-green full" id="saveSettings">Save settings</button></div>
 
-      <div class="sec-title">Photos</div>
+      <div class="sec-title">Move from Take.app</div>
       <div class="card" style="padding:16px">
-        <p style="line-height:1.5;margin-bottom:12px" id="impInfo"></p>
+        <p style="line-height:1.5;margin-bottom:12px"><b>Step 1:</b> bring in every product and category from your Take.app store.</p>
+        <button class="btn b-ink full" id="takeImportBtn">Import all products from Take.app</button>
+        <p style="line-height:1.5;margin:18px 0 12px" id="impInfo"></p>
         <button class="btn b-line full" id="importBtn">Copy photos from Take.app</button>
       </div>
 
@@ -461,7 +463,7 @@ function renderSettings() {
   $$("[data-s]").forEach((el) => (el.value = store.settings[el.dataset.s] ?? ""));
   $("#sLogo").src = store.settings.logo; $("#sCust").src = store.settings.customImg;
   const left = [...store.products.flatMap((p) => p.imgs), store.settings.logo, store.settings.customImg].filter((s) => s && !s.startsWith("/img/")).length;
-  $("#impInfo").innerHTML = left ? `<b>${left} photos</b> are still loaded from Take.app. Copy them here <b>before</b> you cancel Take.app, or they'll disappear.` : `✓ All photos are stored on your own site.`;
+  $("#impInfo").innerHTML = left ? `<b>Step 2:</b> ${left} photos are still loaded from Take.app. Copy them here <b>before</b> you cancel Take.app, or they'll disappear.` : `✓ All photos are stored on your own site.`;
   $("#importBtn").classList.toggle("hide", !left);
 }
 $("#saveSettings").onclick = async () => {
@@ -477,10 +479,35 @@ const imgSetting = (input, key, preview) => ($(input).onchange = async (e) => {
 });
 imgSetting("#logoFile", "logo", "#sLogo"); imgSetting("#custFile", "customImg", "#sCust");
 $("#importBtn").onclick = async () => {
-  $("#importBtn").disabled = true; $("#importBtn").textContent = "Copying… (about 30 seconds)";
-  try { const d = await api("/api/import-images", { method: "POST" }); store = d.store; toast(d.left ? `Copied ${d.moved}. Tap again for the rest.` : `Done, copied ${d.moved} photos ✓`, !!d.failed); renderAll(); }
-  catch (e) { toast(e.message, true); }
-  $("#importBtn").disabled = false; $("#importBtn").textContent = "Copy photos from Take.app";
+  const b = $("#importBtn"); b.disabled = true; let total = 0;
+  try {
+    for (let round = 0; round < 20; round++) {
+      b.textContent = `Copying photos… ${total} done (keep this open)`;
+      const d = await api("/api/import-images", { method: "POST" });
+      store = d.store; total += d.moved;
+      if (!d.left || !d.moved) { toast(d.left ? `Copied ${total}. ${d.left} couldn't be copied.` : `Done, copied ${total} photos ✓`, !!d.left); break; }
+    }
+  } catch (e) { toast(e.message, true); }
+  renderAll(); b.disabled = false; b.textContent = "Copy photos from Take.app";
+};
+$("#takeImportBtn").onclick = async () => {
+  const b = $("#takeImportBtn");
+  let data;
+  try { data = await fetch("/admin/takeapp-import.json", { cache: "no-store" }).then((r) => r.json()); }
+  catch (e) { return toast("Couldn't load the Take.app list", true); }
+  if (!confirm(`Import ${data.products.length} products and ${data.categories.length} categories from Take.app?\n\nThe starter products will be replaced. Anything you added yourself is kept.`)) return;
+  b.disabled = true; b.textContent = "Importing…";
+  const before = JSON.stringify(store);
+  const mine = store.products.filter((p) => !/^p\d+$/.test(p.id) && !String(p.id).startsWith("t"));
+  const already = new Set(store.products.map((p) => p.src).filter(Boolean));
+  const fresh = data.products.filter((p) => !already.has(p.src));
+  const keptTake = store.products.filter((p) => p.src);
+  store.products = [...mine, ...keptTake, ...fresh];
+  const ids = new Set(data.categories.map((c) => c.id));
+  const used = new Set(store.products.flatMap((p) => p.cats));
+  store.categories = [...data.categories, ...store.categories.filter((c) => !ids.has(c.id) && used.has(c.id))];
+  if (await save(`Imported ${fresh.length} products ✓`)) renderAll(); else store = JSON.parse(before);
+  b.disabled = false; b.textContent = "Import all products from Take.app";
 };
 
 boot().catch(() => { document.body.innerHTML = '<p style="padding:40px;text-align:center">Couldn\'t load the store. Check your internet and refresh.</p>'; });
